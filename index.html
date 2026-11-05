@@ -15,7 +15,7 @@
 </head>
 <body data-page-node-id="CxfAa6ekloWNpnEMIA2jBO">
   <h1 data-page-node-id="xWlncchRgjLIsaXAef48GE">LifeOS 人生第二大脑 · 隐私政策</h1>
-  <p class="meta" data-page-node-id="XoYdIDdgFlgqWW6Fi4yiMq">最后更新日期：2026-10-05　生效日期：2026-10-05</p>
+  <p class="meta" data-page-node-id="XoYdIDdgFlgqWW6Fi4yiMq">最后更新日期：2026-11-05　生效日期：2026-11-05</p>
 
   <p data-page-node-id="6nFCvDaDeYXlMB6yEBCKYS">欢迎使用 LifeOS 人生第二大脑（以下简称"本应用"）。本应用是一款帮助用户管理任务、目标、日程、笔记、学习与健康的个人效率工具。我们非常重视您的个人信息和隐私保护。请您在使用本应用前，仔细阅读并理解本隐私政策。一旦您开始使用本应用，即表示您已同意本政策所述内容。</p>
 
@@ -25,8 +25,8 @@
     <li data-page-node-id="fzoCd7amMSfnTw78VYFQZc"><strong data-page-node-id="rVMh1wfFVY8TZuX2zMP5oO">账号信息</strong>：您注册时提供的手机号或邮箱、登录密码（以加密形式保存在本地）。用于账号登录与多设备隔离。</li>
     <li data-page-node-id="O6MxgFNJogbqhKPV8VSCxO"><strong data-page-node-id="QH2BpFmhm2WIAK32VeqPLE">您主动录入的内容</strong>：任务、目标、日程、笔记、学习资料、财务记录、物品清单、健康记录（步数等）、单词卡等。这些数据是应用的核心功能载体，仅保存在本地设备。</li>
     <li data-page-node-id="T4vWQGQIogRQKHFm4NcNya"><strong data-page-node-id="b7hc353jzkR1NiFB3RsusZ">设备信息</strong>：设备型号、系统版本等，用于界面适配与兼容性处理。</li>
-    <li data-page-node-id="iVCnVLnWtJZ91NPLHrfQ7X"><strong data-page-node-id="CxsAUoVgjn4N9fXfsz7t34">运动健康数据</strong>：在您授权后，通过系统"运动健康"能力（<code data-page-node-id="xSrOerH4fBrPUiXBKRqhGt">ACTIVITY_MOTION</code>）读取步数，用于健康看板展示。我们仅在本机读取与展示，不上传。</li>
-    <li><strong>麦克风与语音数据</strong>：在您主动使用语音速记或语音输入时，经您明确授权后，调用系统麦克风能力（<code>MICROPHONE</code>）采集音频并实时转换为文字写入笔记或任务。音频仅用于即时本地转写，不作商业留存，不上传至第三方服务器。</li>
+    <li data-page-node-id="iVCnVLnWtJZ91NPLHrfQ7X"><strong data-page-node-id="CxsAUoVgjn4N9fXfsz7t34">运动健康数据</strong>：在您授权后，通过系统"运动健康"能力（<code data-page-node-id="xSrOerH4fBrPUiXBKRqhGt">ohos.permission.ACTIVITY_MOTION</code>，简称 ACTIVITY_MOTION）读取步数，用于健康看板展示。我们仅在本机读取与展示，不上传。</li>
+    <li><strong>麦克风与语音数据</strong>：在您主动使用语音速记或语音输入时，经您明确授权后，调用系统麦克风能力（<code>ohos.permission.MICROPHONE</code>，简称 MICROPHONE）采集音频并实时转换为文字写入笔记或任务。音频仅用于即时本地转写，不作商业留存，不上传至第三方服务器。</li>
     <li data-page-node-id="vEHrDyEF6IpVB7DAnfCZey"><strong data-page-node-id="O71FmRpGFKvcrYAP60X2nx">AI 对话内容</strong>：当您使用"AI 助手 / 小艺智能体"功能时，您输入的问题会发送给您所配置的第三方大模型服务进行处理（见下文"第三方服务"）。对话历史保存在本地。</li>
   </ul>
 
@@ -67,5 +67,45 @@
   <p data-page-node-id="Sjzj9SOdZIlzvfAHusbWap">官方客服与隐私支持邮箱：<code data-page-node-id="Fb0UWPJ48WWanUfaCUXGYH">20240319@cqu.edu.stu.cn</code></p>
 
   <p class="meta" data-page-node-id="KhSQnWmwtSglGe2QFQxJYB">本隐私政策依据《中华人民共和国个人信息保护法》《网络安全法》等相关法律法规编写。</p>
+
+  <h2>八、应用权限声明（敏感权限清单）</h2>
+  <p>本应用为向您提供服务，会在您使用相关功能时申请以下系统权限。我们严格遵循"最小必要"原则，仅在功能所必需的范围内使用这些权限：</p>
+  <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; font-size:14px;">
+    <thead>
+      <tr style="background:#f3f1ea;">
+        <th>权限名称</th>
+        <th>权限类型</th>
+        <th>申请目的与用途</th>
+        <th>使用场景</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>ohos.permission.INTERNET</code></td>
+        <td>普通权限（安装即授权）</td>
+        <td>用于 AI 对话、云端同步等需要联网的功能。</td>
+        <td>应用内联网功能，按需使用，不上传无关个人信息。</td>
+      </tr>
+      <tr>
+        <td><code>ohos.permission.ACTIVITY_MOTION</code></td>
+        <td>敏感权限（user_grant，需您授权）</td>
+        <td>读取设备步数等运动健康数据，用于健康看板展示。</td>
+        <td>您在"健康"模块查看步数时，经您授权后在本机读取与展示，不上传。</td>
+      </tr>
+      <tr>
+        <td><code>ohos.permission.PUBLISH_AGENT_REMINDER</code></td>
+        <td>普通权限（安装即授权）</td>
+        <td>用于向您推送本地日程与待办提醒。</td>
+        <td>您在"设置"中开启提醒后，由系统代理推送本地通知。</td>
+      </tr>
+      <tr>
+        <td><code>ohos.permission.MICROPHONE</code></td>
+        <td>敏感权限（user_grant，需您授权）</td>
+        <td>采集麦克风音频，用于语音速记 / 语音输入实时转写为文字。</td>
+        <td>您主动点击"语音输入"并授权后录制，音频仅用于即时本地转写，不作留存、不上传。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>上述敏感权限（<code>ohos.permission.ACTIVITY_MOTION</code>、<code>ohos.permission.MICROPHONE</code>）均会在您首次使用相关功能时弹窗征得您的明确同意；您可随时在系统的"设置 → 应用管理 → LifeOS → 权限"中撤回授权，撤回后相关功能将不可用，但不影响其他功能的使用。</p>
 </body>
 </html>
