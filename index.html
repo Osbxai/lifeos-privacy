@@ -27,15 +27,13 @@
     <li data-page-node-id="T4vWQGQIogRQKHFm4NcNya"><strong data-page-node-id="b7hc353jzkR1NiFB3RsusZ">设备信息</strong>：设备型号、系统版本等，用于界面适配与兼容性处理。</li>
     <li data-page-node-id="iVCnVLnWtJZ91NPLHrfQ7X"><strong data-page-node-id="CxsAUoVgjn4N9fXfsz7t34">运动健康数据</strong>：在您授权后，通过系统"运动健康"能力（<code data-page-node-id="xSrOerH4fBrPUiXBKRqhGt">ohos.permission.ACTIVITY_MOTION</code>，简称 ACTIVITY_MOTION）读取步数，用于健康看板展示。我们仅在本机读取与展示，不上传。</li>
     <li><strong>麦克风与语音数据</strong>：在您主动使用语音速记或语音输入时，经您明确授权后，调用系统麦克风能力（<code>ohos.permission.MICROPHONE</code>，简称 MICROPHONE）采集音频并实时转换为文字写入笔记或任务。音频仅用于即时本地转写，不作商业留存，不上传至第三方服务器。</li>
-    <li data-page-node-id="vEHrDyEF6IpVB7DAnfCZey"><strong data-page-node-id="O71FmRpGFKvcrYAP60X2nx">AI 对话内容</strong>：当您使用"AI 助手 / 小艺智能体"功能时，您输入的问题会发送给您所配置的第三方大模型服务进行处理（见下文"第三方服务"）。对话历史保存在本地。</li>
+    <li data-page-node-id="vEHrDyEF6IpVB7DAnfCZey"><strong data-page-node-id="O71FmRpGFKvcrYAP60X2nx">AI 对话内容</strong>：当您使用"AI 助手"功能并主动配置云端模型后，您输入的问题会发送给您所配置的第三方大模型服务进行处理（见下文"第三方服务"）。未配置时，对话由应用内本地规则引擎处理，不上传任何内容。对话历史保存在本地。</li>
   </ul>
 
   <h2 data-page-node-id="xZPs0TxaxWKXwC3TDsGAFq">二、第三方服务</h2>
-  <p data-page-node-id="HAR4dsdNPilmEqqdBuIVKV">为提供 AI 对话能力，本应用会按您的配置调用以下第三方服务。相关数据的处理受对应服务商的隐私政策约束：</p>
+  <p data-page-node-id="HAR4dsdNPilmEqqdBuIVKV">为提供 AI 对话能力，仅在您主动配置 API Key 后，本应用才会调用以下第三方服务。相关数据的处理受对应服务商的隐私政策约束：</p>
   <ul data-page-node-id="icdNJtxVP4dxjB4LOB9xm5">
     <li data-page-node-id="8WIaOKFRUZtqd1UVggFg6n"><strong data-page-node-id="8mQMe3myyZG24vrQGfoBNf">硅基流动（SiliconFlow）/ DeepSeek</strong>：当您配置其 API Key 后，AI 对话内容会通过其 OpenAI 兼容接口处理。</li>
-    <li data-page-node-id="Jjm394GwWNY3XAPlj56kye"><strong data-page-node-id="tb9E2lyjp2SOgrelNp4HwC">小艺智能体（华为 Agent Framework）</strong>：当您配置小艺 Agent ID 后，AI 对话由华为小艺云端处理，需登录华为账号并在真机上使用。</li>
-    <li data-page-node-id="eqOzVKuiO0tkXSlJSUZ2tH"><strong data-page-node-id="9oYTIGaRxqoERUMuSHyDZB">华为系统提醒（PUBLISH_AGENT_REMINDER）</strong>：用于向您推送本地日程提醒。</li>
   </ul>
   <p data-page-node-id="RllyI6m01QOV6dc6t2sy7A">除上述情形外，我们不会将您的个人信息提供给任何第三方。</p>
 
@@ -91,12 +89,6 @@
         <td>敏感权限（user_grant，需您授权）</td>
         <td>读取设备步数等运动健康数据，用于健康看板展示。</td>
         <td>您在"健康"模块查看步数时，经您授权后在本机读取与展示，不上传。</td>
-      </tr>
-      <tr>
-        <td><code>ohos.permission.PUBLISH_AGENT_REMINDER</code></td>
-        <td>普通权限（安装即授权）</td>
-        <td>用于向您推送本地日程与待办提醒。</td>
-        <td>您在"设置"中开启提醒后，由系统代理推送本地通知。</td>
       </tr>
       <tr>
         <td><code>ohos.permission.MICROPHONE</code></td>
